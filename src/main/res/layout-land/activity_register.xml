@@ -1,0 +1,1141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context="com.simcarddemo.Register">
+    <LinearLayout
+
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#ffffff"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:id="@+id/registertitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_marginLeft="25dp"
+                android:layout_weight="0.18"
+                android:text="REGISTRATION"
+                android:textAlignment="center"
+                android:textColor="#2582C5"
+                android:textSize="28dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearMykad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.18"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView40"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_weight="1"
+                android:text="ID Card"
+                android:textAlignment="center"
+                android:textColor="#C62C0B"
+                android:textSize="20dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/imageButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_weight="1"
+                    android:onClick="btn_Read"
+                    android:src="@drawable/card" />
+
+                <ImageView
+                    android:id="@+id/tick4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="317dp"
+                    android:layout_marginRight="317dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/greentick"
+                    android:visibility="invisible" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/textView38"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_weight="1"
+                android:text="MyKad Image:"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/myKadPhoto"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginBottom="30dp"
+                android:layout_weight="1"
+                android:visibility="gone"
+                app:srcCompat="@drawable/person" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearPassport"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Passport"
+                android:textAlignment="center"
+                android:textColor="#C62C0B"
+                android:textSize="20dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imPassport"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_below="@+id/textView11"
+                    android:layout_toLeftOf="@+id/imageButton"
+                    android:layout_toStartOf="@+id/imageButton"
+                    android:onClick="ReadMRZ"
+                    android:src="@drawable/passport" />
+
+                <ImageView
+                    android:id="@+id/tick3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="310dp"
+                    android:layout_marginRight="310dp"
+                    android:src="@drawable/greentick"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="30dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_weight="0.18"
+            android:background="@drawable/greybackground"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="30dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/textView25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="Attached Document"
+                    android:textSize="20dp" />
+
+                <ImageView
+                    android:id="@+id/AttachDoc"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_below="@+id/textView25"
+                    android:layout_centerHorizontal="true"
+                    android:layout_weight="0.5" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+
+        </RelativeLayout>
+
+
+        <LinearLayout android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="30dp"
+            android:orientation="vertical"
+            android:background="@drawable/greybackground"
+            >
+
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Personal Info"
+                android:textColor="#2582C5"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal|center_vertical"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="FINGERPRINT"
+                android:id="@+id/textView36"
+                android:layout_gravity="center_horizontal"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="30dp">
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="36dp"
+                    android:text="Document Type:"
+                    android:textColor="#2582C5"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_gravity="bottom"
+                    android:id="@+id/textView3" />
+
+                <Spinner
+                    android:id="@+id/spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:entries="@array/Document_arrays"
+                    tools:prompt="@string/document_prompt" />
+
+                <Spinner
+                    android:id="@+id/spinner3"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:entries="@array/Document_arrays2"
+                    tools:prompt="@string/document_prompt" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/ID"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_weight="1"
+                    android:background="#f3f3f3"
+                    android:hint="Document Number"
+                    android:inputType="textCapCharacters"
+                    android:maxLength="20"
+                    android:paddingLeft="5dp" />
+
+                <Button
+                    android:id="@+id/movers"
+                    android:layout_width="156dp"
+                    android:layout_height="wrap_content"
+                    android:onClick="OnMovers"
+                    android:text="CHECK MOVERS" />
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/Name"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:hint="Name"
+                android:background="#f3f3f3"
+                android:paddingLeft="5dp"
+                android:layout_marginTop="15dp"
+                android:maxLength="100"
+                android:inputType="textCapCharacters" />
+
+            <EditText
+                android:id="@+id/DOB"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:hint="@string/set_date"
+                android:background="#f3f3f3"
+                android:paddingLeft="5dp"
+                android:layout_marginTop="15dp" />
+
+            <EditText
+                android:id="@+id/Nationality"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:background="#f3f3f3"
+                android:hint="Nationality (Eg. MALAYSIAN - MYS)"
+                android:maxLength="3"
+                android:paddingLeft="5dp"
+                android:text="MYS"
+                android:inputType="textCapCharacters" />
+
+            <EditText
+                android:id="@+id/Gender"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:hint="Gender (M/F)"
+                android:background="#f3f3f3"
+                android:paddingLeft="5dp"
+                android:layout_marginTop="15dp"
+                android:maxLength="1"
+                android:inputType="textCapCharacters" />
+
+            <EditText
+                android:id="@+id/Address1"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:hint="Address"
+                android:background="#f3f3f3"
+                android:paddingLeft="5dp"
+                android:layout_marginTop="15dp"
+                android:maxLength="100"
+                android:inputType="textCapCharacters" />
+            <EditText
+                android:id="@+id/Address2"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:hint="Address2"
+                android:background="#f3f3f3"
+                android:paddingLeft="5dp"
+                android:layout_marginTop="15dp"
+                android:maxLength="100"
+                android:inputType="textCapCharacters" />
+            <EditText
+                android:id="@+id/Address3"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:hint="Address3"
+                android:background="#f3f3f3"
+                android:paddingLeft="5dp"
+                android:layout_marginTop="15dp"
+                android:maxLength="100"
+                android:inputType="textCapCharacters" />
+            <EditText
+                android:id="@+id/Postcode"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:hint="Postcode"
+                android:background="#f3f3f3"
+                android:paddingLeft="5dp"
+                android:layout_marginTop="15dp"
+                android:maxLength="5"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/City"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:hint="City"
+                android:background="#f3f3f3"
+                android:paddingLeft="5dp"
+                android:layout_marginTop="15dp"
+                android:maxLength="50"
+                android:inputType="textCapCharacters" />
+
+            <EditText
+                android:id="@+id/State"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:hint="State"
+                android:background="#f3f3f3"
+                android:paddingLeft="5dp"
+                android:layout_marginTop="15dp"
+                android:maxLength="50"
+                android:inputType="textCapCharacters" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutsim1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="30dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_weight="0.18"
+            android:background="@drawable/greybackground"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:text="Simcard 1 Info"
+                android:textColor="#2582C5"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView35"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:text="Operator:"
+                    android:textColor="#2582C5"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/spinner2"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_weight="1"
+                    android:entries="@array/operator_arrays"
+                    android:prompt="@string/operator" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnBarcode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="ReadBarcode2"
+                android:text="READ BARCODE" />
+
+            <EditText
+                android:id="@+id/PhoneNo"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:background="#f3f3f3"
+                android:hint="Phone Number"
+                android:inputType="phone"
+                android:maxLength="12"
+                android:paddingLeft="5dp" />
+
+            <EditText
+                android:id="@+id/SerialNo"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:background="#f3f3f3"
+                android:hint="Sim Serial No"
+                android:inputType="number"
+                android:maxLength="20"
+                android:paddingLeft="5dp" />
+
+            <EditText
+                android:id="@+id/PUK1"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:background="#f3f3f3"
+                android:hint="PUK1"
+                android:inputType="number"
+                android:maxLength="10"
+                android:paddingLeft="5dp" />
+
+            <EditText
+                android:id="@+id/PUK2"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:background="#f3f3f3"
+                android:hint="PUK2"
+                android:inputType="number"
+                android:maxLength="10"
+                android:paddingLeft="5dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutsim2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="30dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_weight="0.18"
+            android:background="@drawable/greybackground"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:text="Simcard 2 Info"
+                android:textColor="#2582C5"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView35"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:text="Operator:"
+                    android:textColor="#2582C5"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/spinner2sim2"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_weight="1"
+                    android:entries="@array/operator_arrays"
+                    android:prompt="@string/operator" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnBarcodesim2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="ReadBarcode2"
+                android:text="READ BARCODE" />
+
+            <EditText
+                android:id="@+id/PhoneNosim2"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:background="#f3f3f3"
+                android:hint="Phone Number"
+                android:inputType="phone"
+                android:maxLength="12"
+                android:paddingLeft="5dp" />
+
+            <EditText
+                android:id="@+id/SerialNosim2"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:background="#f3f3f3"
+                android:hint="Sim Serial No"
+                android:inputType="number"
+                android:maxLength="20"
+                android:paddingLeft="5dp" />
+
+            <EditText
+                android:id="@+id/PUK1sim2"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:background="#f3f3f3"
+                android:hint="PUK1"
+                android:inputType="number"
+                android:maxLength="10"
+                android:paddingLeft="5dp" />
+
+            <EditText
+                android:id="@+id/PUK2sim2"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:background="#f3f3f3"
+                android:hint="PUK2"
+                android:inputType="number"
+                android:maxLength="10"
+                android:paddingLeft="5dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutsim3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="30dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_weight="0.18"
+            android:background="@drawable/greybackground"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:text="Simcard 3 Info"
+                android:textColor="#2582C5"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView35"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:text="Operator:"
+                    android:textColor="#2582C5"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/spinner2sim3"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_weight="1"
+                    android:entries="@array/operator_arrays"
+                    android:prompt="@string/operator" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnBarcodesim3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="ReadBarcode2"
+                android:text="READ BARCODE" />
+
+            <EditText
+                android:id="@+id/PhoneNosim3"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:background="#f3f3f3"
+                android:hint="Phone Number"
+                android:inputType="phone"
+                android:maxLength="12"
+                android:paddingLeft="5dp" />
+
+            <EditText
+                android:id="@+id/SerialNosim3"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:background="#f3f3f3"
+                android:hint="Sim Serial No"
+                android:inputType="number"
+                android:maxLength="20"
+                android:paddingLeft="5dp" />
+
+            <EditText
+                android:id="@+id/PUK1sim3"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:background="#f3f3f3"
+                android:hint="PUK1"
+                android:inputType="number"
+                android:maxLength="10"
+                android:paddingLeft="5dp" />
+
+            <EditText
+                android:id="@+id/PUK2sim3"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:background="#f3f3f3"
+                android:hint="PUK2"
+                android:inputType="number"
+                android:maxLength="10"
+                android:paddingLeft="5dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutsim4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="30dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_weight="0.18"
+            android:background="@drawable/greybackground"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:text="Simcard 4 Info"
+                android:textColor="#2582C5"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView35"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:text="Operator:"
+                    android:textColor="#2582C5"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/spinner2sim4"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_weight="1"
+                    android:entries="@array/operator_arrays"
+                    android:prompt="@string/operator" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnBarcodesim4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="ReadBarcode2"
+                android:text="READ BARCODE" />
+
+            <EditText
+                android:id="@+id/PhoneNosim4"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:background="#f3f3f3"
+                android:hint="Phone Number"
+                android:inputType="phone"
+                android:maxLength="12"
+                android:paddingLeft="5dp" />
+
+            <EditText
+                android:id="@+id/SerialNosim4"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:background="#f3f3f3"
+                android:hint="Sim Serial No"
+                android:inputType="number"
+                android:maxLength="20"
+                android:paddingLeft="5dp" />
+
+            <EditText
+                android:id="@+id/PUK1sim4"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:background="#f3f3f3"
+                android:hint="PUK1"
+                android:inputType="number"
+                android:maxLength="10"
+                android:paddingLeft="5dp" />
+
+            <EditText
+                android:id="@+id/PUK2sim4"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:background="#f3f3f3"
+                android:hint="PUK2"
+                android:inputType="number"
+                android:maxLength="10"
+                android:paddingLeft="5dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutsim5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="30dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_weight="0.18"
+            android:background="@drawable/greybackground"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:text="Simcard 5 Info"
+                android:textColor="#2582C5"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView35"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:text="Operator:"
+                    android:textColor="#2582C5"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/spinner2sim5"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_weight="1"
+                    android:entries="@array/operator_arrays"
+                    android:prompt="@string/operator" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnBarcodesim5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="ReadBarcode2"
+                android:text="READ BARCODE" />
+
+            <EditText
+                android:id="@+id/PhoneNosim5"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:background="#f3f3f3"
+                android:hint="Phone Number"
+                android:inputType="phone"
+                android:maxLength="12"
+                android:paddingLeft="5dp" />
+
+            <EditText
+                android:id="@+id/SerialNosim5"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:background="#f3f3f3"
+                android:hint="Sim Serial No"
+                android:inputType="number"
+                android:maxLength="20"
+                android:paddingLeft="5dp" />
+
+            <EditText
+                android:id="@+id/PUK1sim5"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:background="#f3f3f3"
+                android:hint="PUK1"
+                android:inputType="number"
+                android:maxLength="10"
+                android:paddingLeft="5dp" />
+
+            <EditText
+                android:id="@+id/PUK2sim5"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:background="#f3f3f3"
+                android:hint="PUK2"
+                android:inputType="number"
+                android:maxLength="10"
+                android:paddingLeft="5dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.18"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnundoaddsim"
+                android:layout_width="190dp"
+                android:layout_height="38dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/btn"
+                android:onClick="onUndoSimadd"
+                android:text="UNDO"
+                android:textColor="#fff" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.18"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnaddsim"
+                android:layout_width="190dp"
+                android:layout_height="38dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/btn"
+                android:onClick="onSimadd"
+                android:text="ADD SIM CARD"
+                android:textColor="#fff" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="30dp">
+
+            <TextView
+                android:id="@+id/textView39"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@+id/imagesource"
+                android:layout_toStartOf="@+id/imagesource"
+                android:text="Supporting Document"
+                android:textAlignment="center"
+                android:textColor="#C62C0B"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/textView23"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:textColor="#C62C0B"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:onClick="imageClick2"
+                    android:src="@drawable/document" />
+
+                <ImageView
+                    android:id="@+id/tick5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/greentick"
+                    android:visibility="invisible"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="309dp"
+                    android:layout_marginEnd="309dp" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+
+            android:layout_marginTop="30dp">
+
+            <LinearLayout
+                android:id="@+id/imageCapture"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="30dp"
+                android:layout_marginTop="30dp"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/textView26"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.11"
+                    android:text="Live Capture:"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/tick1"
+                android:layout_toRightOf="@+id/tick1"
+                android:text="Capture Face"
+                android:textAlignment="center"
+                android:textColor="#C62C0B"
+                android:textSize="20dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imagesource"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_alignParentBottom="true"
+                    android:onClick="imageClick"
+                    android:src="@mipmap/face" />
+
+                <ImageView
+                    android:id="@+id/tick1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginEnd="307dp"
+                    android:layout_marginRight="307dp"
+                    android:layout_marginTop="21dp"
+                    android:src="@drawable/greentick"
+                    android:visibility="invisible" />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/LiveCapture"
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                android:layout_marginTop="20dp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+
+            android:layout_marginTop="30dp">
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Capture Fingerprint"
+                android:textAlignment="center"
+                android:textColor="#C62C0B"
+                android:textSize="20dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:id="@+id/imageButton8"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@android:color/transparent"
+                    android:onClick="btn_FP"
+                    android:src="@drawable/fp" />
+
+                <ImageView
+                    android:id="@+id/tick2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/greentick"
+                    android:visibility="invisible"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="305dp"
+                    android:layout_marginEnd="305dp"
+                    android:layout_marginTop="20dp" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnSend"
+                android:layout_width="190dp"
+                android:layout_height="38dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/btn"
+                android:onClick="OnRegister"
+                android:text="next"
+                android:textColor="#fff" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

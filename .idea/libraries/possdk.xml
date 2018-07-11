@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="possdk">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/possdk.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

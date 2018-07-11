@@ -1,0 +1,683 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.simcarddemo.FaceRecognition"
+    android:background="#ffffff">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="FACE RECOGNITION"
+                android:id="@+id/textView51"
+                android:textSize="30dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:gravity="center" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/btnProceed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn"
+                    android:text="Register"
+                    android:textColor="#FFFFFF"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/btnCancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn"
+                    android:text="Cancel"
+                    android:textColor="#FFFFFF"
+                    android:visibility="invisible" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/scrollView"
+            android:layout_marginTop="50dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible"
+                android:id="@+id/Info">
+
+                <LinearLayout
+                    android:id="@+id/SearchVal"
+                    android:layout_below="@+id/addSim"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/relativeLayout"
+                        android:layout_marginBottom="30dp" >
+
+                        <ImageView
+                            android:id="@+id/Custimage"
+                            android:layout_width="300dp"
+                            android:layout_height="300dp"
+                            android:onClick="Recapture"
+                            android:background="@drawable/person"
+                            android:layout_below="@+id/textView24"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="18dp" />
+
+                        <ImageView
+                            android:id="@+id/imageView3"
+                            android:layout_width="360dp"
+                            android:layout_height="300dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_below="@+id/textView5"
+                            android:layout_marginLeft="62dp"
+                            android:layout_marginStart="62dp"
+                            android:onClick="Recapture"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/textView5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignLeft="@+id/imageView3"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignStart="@+id/imageView3"
+                            android:layout_marginLeft="105dp"
+                            android:layout_marginStart="105dp"
+                            android:text="Live Photo"
+                            android:textSize="30dp"
+                            android:textStyle="bold"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/textView24"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Photo From Database"
+                            android:textSize="30dp"
+                            android:textStyle="bold"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignLeft="@+id/Custimage"
+                            android:layout_alignStart="@+id/Custimage" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/L2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:id="@+id/linearLayout">
+
+                            <TextView
+                                android:id="@+id/textView4"
+                                android:layout_width="524dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:text="Live Capture "
+                                android:textSize="30sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/textView20"
+                                android:layout_width="524dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:text="Photo From Database"
+                                android:textSize="30sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/Custimage1"
+                            android:layout_width="200dp"
+                            android:layout_height="200dp"
+                            android:layout_marginEnd="111dp"
+                            android:layout_marginRight="111dp"
+                            android:background="@drawable/person"
+                            android:layout_marginTop="33dp"
+                            android:layout_below="@+id/linearLayout"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentEnd="true" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="30dp"
+                    android:orientation="vertical"
+                    android:background="@drawable/greybackground"
+                    android:layout_weight="0.18"
+                    android:id="@+id/addSim"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Add Number"
+                        android:textColor="#2582C5"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_horizontal|center_vertical" />
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="Operator:"
+                            android:textColor="#2582C5"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            android:id="@+id/textView35" />
+
+                        <Spinner
+                            android:id="@+id/spinner2"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="15dp"
+                            android:entries="@array/operator_arrays"
+                            android:prompt="@string/operator"
+                            android:layout_weight="1" />
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/PhoneNo"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:hint="Phone Number"
+                        android:background="#f3f3f3"
+                        android:paddingLeft="5dp"
+                        android:layout_marginTop="15dp"
+                        android:maxLength="12"
+                        android:inputType="number"/>
+
+                    <EditText
+                        android:id="@+id/SerialNo"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:hint="Sim Serial No"
+                        android:background="#f3f3f3"
+                        android:paddingLeft="5dp"
+                        android:layout_marginTop="15dp"
+                        android:maxLength="20"
+                        android:inputType="number"/>
+
+                    <EditText
+                        android:id="@+id/PUK1"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:hint="PUK1"
+                        android:background="#f3f3f3"
+                        android:paddingLeft="5dp"
+                        android:layout_marginTop="15dp"
+                        android:maxLength="10"
+                        android:inputType="number"/>
+
+                    <EditText
+                        android:id="@+id/PUK2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:hint="PUK2"
+                        android:background="#f3f3f3"
+                        android:paddingLeft="5dp"
+                        android:layout_marginTop="15dp"
+                        android:maxLength="10"
+                        android:inputType="number"/>
+
+                    <Button
+                        android:text="Add New Number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/btnAddSim"
+                        />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/SearchVal"
+                    android:id="@+id/linear1">
+
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/Name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Name : "
+                            android:textSize="30dp"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:textSize="30dp"
+                            android:layout_width="match_parent"
+                            android:id="@+id/tvName" />
+
+                        <TextView
+                            android:id="@+id/DocumentTy"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:text="Document Type :  "
+                            android:textSize="30dp"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:textSize="30dp"
+                            android:layout_width="match_parent"
+                            android:id="@+id/tvPass"/>
+
+                        <TextView
+                            android:id="@+id/DocumentNo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:text="Document No : "
+                            android:textSize="30dp"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:textSize="30dp"
+                            android:layout_width="match_parent"
+                            android:id="@+id/tvID"/>
+
+                        <TextView
+                            android:id="@+id/DOB"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:text="Date of Birth : "
+                            android:textSize="30dp"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:textSize="30dp"
+                            android:layout_width="match_parent"
+                            android:id="@+id/tvDOB"/>
+
+                        <TextView
+                            android:id="@+id/Nationality"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:text="Nationality : "
+                            android:textSize="30dp"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:textSize="30dp"
+                            android:layout_width="match_parent"
+                            android:id="@+id/tvNationality"/>
+
+                        <TextView
+                            android:id="@+id/Gender"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:text="Gender : "
+                            android:textSize="30dp"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:textSize="30dp"
+                            android:layout_width="match_parent"
+                            android:id="@+id/tvGender"/>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/Address1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Address : "
+                            android:textSize="30dp"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:textSize="30dp"
+                            android:id="@+id/tvAddr1"
+                            android:layout_width="match_parent" />
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:textSize="30dp"
+                            android:id="@+id/tvAddr2"
+                            android:layout_width="match_parent" />
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:textSize="30dp"
+                            android:id="@+id/tvAddr3"
+                            android:layout_width="match_parent" />
+
+                        <TextView
+                            android:id="@+id/Postcode"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:text="Postcode : "
+                            android:textSize="30dp"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:textSize="30dp"
+                            android:id="@+id/tvPostcode"
+                            android:layout_width="match_parent" />
+
+                        <TextView
+                            android:id="@+id/City"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:text="City : "
+                            android:textSize="30dp"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:textSize="30dp"
+                            android:id="@+id/tvCity"
+                            android:layout_width="match_parent" />
+
+                        <TextView
+                            android:id="@+id/State"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:text="State : "
+                            android:textSize="30dp"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:textSize="30dp"
+                            android:id="@+id/tvState"
+                            android:layout_width="match_parent" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:id="@+id/telco"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/textView31"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/celcom"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/imgCelcom"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:src="@drawable/celcom"
+                            app:srcCompat="@drawable/celcom" />
+
+                        <TextView
+                            android:id="@+id/tvcelcom1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="TextView"
+                            android:textAlignment="center"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvcelcom2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="TextView"
+                            android:textAlignment="center"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/maxis"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/imgmaxis"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:src="@drawable/maxis"
+                            app:srcCompat="@drawable/maxis" />
+
+                        <TextView
+                            android:id="@+id/tvmaxis1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="TextView"
+                            android:textAlignment="center"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvmaxis2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="TextView"
+                            android:textAlignment="center"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/umobile"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/imgumobile"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:src="@drawable/umobile"
+                            app:srcCompat="@drawable/umobile" />
+
+                        <TextView
+                            android:id="@+id/tvumobile1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="TextView"
+                            android:textAlignment="center"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvumobile2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="TextView"
+                            android:textAlignment="center"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/digi"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/imgdigi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/digi" />
+
+                        <TextView
+                            android:id="@+id/tvdigi1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="TextView"
+                            android:textAlignment="center"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvdigi2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="TextView"
+                            android:textAlignment="center"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <ListView
+                            android:id="@+id/listView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textView31"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/linear1"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginTop="20dp"
+                    android:text="SIM CARD INFORMATION :"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textSize="30dp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/webviewdisplay"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/telco"
+                    android:layout_marginTop="30dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView32"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/linear1"
+                        android:layout_marginBottom="30dp"
+                        android:layout_marginTop="20dp"
+                        android:text="SUPPORTING DOCUMENT :"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textSize="30dp"
+                        android:textStyle="bold" />
+
+                    <WebView
+                        android:id="@+id/webviewacc"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+
+
+
+        </ScrollView>
+
+    </TableLayout>
+
+</RelativeLayout>

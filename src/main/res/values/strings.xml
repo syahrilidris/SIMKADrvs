@@ -1,0 +1,94 @@
+<resources>
+    <string name="app_name">SIMKYC Demo</string>
+    <string name="action_settings">Settings</string>
+    <string name="operator">Choose a Operator</string>
+    <string name="set_date">Date Of Birth</string>
+    <string name="document">Choose document Type</string>
+    <string name="nation_prompt">Select a Nation</string>
+    <string name="gender_prompt">Select a Gender</string>
+    <string name="document_prompt">Select Visa</string>
+
+    <string-array name="operator_arrays">
+        <item>CELCOM</item>
+        <item>MAXIS</item>
+        <item>UMOBILE</item>
+        <item>DIGI</item>
+        <item>ALTEL</item>
+        <item>REDTONE</item>
+        <item>ONEXOX</item>
+        <item>TONE EXCEL</item>
+        <item>TONE PLUS</item>
+        <item>YODOO</item>
+        <item>XOX</item>
+    </string-array>
+
+    <string-array name="Document_arrays">
+        <item>Mykad</item>
+        <item>MyTentera</item>
+        <item>MyPolis</item>
+    </string-array>
+
+    <string-array name="Document_arrays2">
+        <item>Tourist - Passport</item>
+        <item>Ikad / Worker Permit</item>
+        <item>Student Visa</item>
+        <item>IMM13</item>
+        <item>MyPR</item>
+        <item>MyKAS</item>
+    </string-array>
+
+    <string-array name="Document_arrays3">
+        <item>Passport</item>
+        <item>BirthCert</item>
+        <item>IMM13</item>
+        <item>MyPR</item>
+        <item>MyKAS</item>
+        <item>MyTentera</item>
+        <item>MyPolis</item>
+    </string-array>
+
+
+    <string-array name="gender_arrays">
+        <item>MALE</item>
+        <item>FEMALE</item>
+    </string-array>
+
+    <string-array name="Search_arrays">
+        <item>DocumentNo</item>
+        <item>PhoneNo</item>
+        <item>SimSerialNo</item>
+    </string-array>
+    <string name="title_activity_login">Login</string>
+
+    <string name="default_label">xxxxxxxxxx</string>
+    <string name="print_receipt">Print receipt</string>
+    <string name="print_photo">Print photo</string>
+    <string name="print_qrcode">Print qrcode</string>
+    <string name="error_no_printer">Printer not detected</string>
+    <string name="file_chooser">Choose file</string>
+    <string name="print_file_image">Print file image</string>
+
+    <string name="daidalos_hello">Hello World!</string>
+    <string name="daidalos_app_name">aFileDialog</string>
+    <color name="daidalos_gray">#888</color>
+    <string name="daidalos_select">Select</string>
+    <string name="daidalos_cancel">Cancel</string>
+    <string name="daidalos_ok">OK</string>
+    <string name="daidalos_new_file">New</string>
+    <string name="daidalos_create_file">Create file</string>
+    <string name="daidalos_create_folder">Create folder</string>
+    <string name="daidalos_accept">Accept</string>
+    <string name="daidalos_enter_file_name">Enter the name of the file that you want to create</string>
+    <string name="daidalos_enter_folder_name">Enter the name of the folder that you want to create</string>
+    <string name="daidalos_yes">Yes</string>
+    <string name="daidalos_no">No</string>
+    <string name="daidalos_confirm_select_file">Are you sure that you want to select the file \'$file_name\'?</string>
+    <string name="daidalos_confirm_create_file">The file \'$file_name\' do not exists, are you sure that you want to create it?</string>
+    <string name="daidalos_confirm_select_folder">Are you sure that you want to select the folder \'$file_name\'?</string>
+    <string name="daidalos_confirm_create_folder">The folder \'$file_name\' do not exists, are you sure that you want to create it?</string>
+
+    <color name="daidalos_backgroud">#000</color>
+    <color name="daidalos_active_file">#fff</color>
+    <color name="daidalos_inactive_file">#888</color>
+
+</resources>

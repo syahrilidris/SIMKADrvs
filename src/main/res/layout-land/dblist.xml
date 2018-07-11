@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.simcarddemo.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="2dp"
+        android:paddingTop="6dp"
+        android:id="@+id/textView28"
+        android:text="Operator :"
+        android:layout_marginTop="40dp"
+        android:textSize="30dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="2dp"
+        android:paddingTop="6dp"
+        android:id="@+id/operator"
+        android:layout_marginLeft="300dp"
+        android:layout_marginTop="40dp"
+        android:textSize="30dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="2dp"
+        android:paddingTop="6dp"
+        android:id="@+id/textView30"
+        android:text="Phone No :"
+        android:layout_marginTop="80dp"
+        android:textSize="30dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="2dp"
+        android:paddingTop="6dp"
+        android:id="@+id/PhoneNo"
+        android:layout_marginLeft="300dp"
+        android:layout_marginTop="80dp"
+        android:textSize="30dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="2dp"
+        android:paddingTop="6dp"
+        android:id="@+id/textView16"
+        android:text="Sim Serial No :"
+        android:layout_marginTop="120dp"
+        android:textSize="30dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="2dp"
+        android:paddingTop="6dp"
+        android:id="@+id/textView21"
+        android:layout_marginLeft="300dp"
+        android:layout_marginTop="120dp"
+        android:textSize="30dp" />
+
+</RelativeLayout>

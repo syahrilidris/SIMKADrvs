@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="blurredgridmenu-1.0.2">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.android/build-cache/4e8f06b59201e4460eab5ae22296856b18f83c42/output/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.android/build-cache/4e8f06b59201e4460eab5ae22296856b18f83c42/output/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.goka.blurredgridmenu/blurredgridmenu/1.0.2/797f739a1eb930171d28e0a335f8710d89b0f0a6/blurredgridmenu-1.0.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
